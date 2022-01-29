@@ -1,82 +1,33 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Product Card Design - Easy Totorials</title>
+    <title>How To Make Website - Chua Lagowan</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <div class="product">
+    <div class="header">
+        <nav>
+          <img src="images/logo.png" alt="logo">  
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+         </ul>
+        </nav>
 
-        <img src="images/shoes.png" id="frontIng">
-        <img src="images/shoes2.png" id="backing">
-
-        <div class="product-inner" id="productBox">
-            <div class="product-front">
-                <div class="product-top">
-                    <h1>Nike</h1>
-                </div>
-                <div class="product-buttom">
-                    <p>Nike Runing Shoes</p>
-                    <h2>Air Zoom Winflo 6</h2>
-                    <h1>125 <span>$</span></h1>
-                    <button type="button">Add To Bag</button>
-                    <div class="color-select">
-                        <div class="select-item">
-                           <img src="images/shoes-icon.png"> 
-                        </div>
-                        <div class="select-item">
-                            <img src="images/shoes-icon2.png" onclick="flipRight()"> 
-                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-back">
-                <div class="product-top product-top2">
-                    <h1>Nike</h1>
-                </div>
-                <div class="product-buttom">
-                    <p>Nike Runing Shoes</p>
-                    <h2>Air Zoom Winflo 6</h2>
-                    <h1>125 <span>$</span></h1>
-                    <button type="button">Add To Bag</button>
-                    <div class="color-select">
-                        <div class="select-item">
-                           <img src="images/shoes-icon.png" onclick="flipleft()"> 
-                        </div>
-                        <div class="select-item">
-                            <img src="images/shoes-icon2.png"> 
-                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="left-side"></div>
-            <div class="right-side"></div>
+        <div class="text-box">
+             <h1>Go On<br>Your First Date.</h1> 
+             <p>Cobbect With People You Know But Hoven't Met Yet</p>
+             <button type="button" class="btn">Know More Here</button>
         </div>
+        <a href="#" class="Download">DOWNLOAD THE FOTOS <img src="images/down-arrow.png"></a>
     </div>
-</div>
-    <script>
-        var productBox = document.getElementById("productBox");
-        var frontIng = document.getElementById("frontIng");
-        var backIng = document.getElementById("backIng");
-
-        function flipRight() {
-            productBox.style.transform = "rotateY(180deg)";
-            frontIng.style.left = "650px";
-            backIng.style.left = "20px";
-            frontIng.style.transform = 'rotate(-30deg)';
-            backIng.style.transform = 'rotate(0deg)';
-        }
-        function flipleft() {
-            productBox.style.transform = "rotateY(0deg)";
-            frontIng.style.left = "20px";
-            backIng.style.left = "-650px";
-            frontIng.style.transform = 'rotate(0deg)';
-            backIng.style.transform = 'rotate(-30deg);'
-        }
 
 
-    </script>
+
+
 </body>
 </html>
