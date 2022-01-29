@@ -2,42 +2,81 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up From Design - Easy Totorials</title>
+    <title>3D Product Card Design - Easy Totorials</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-      <div class="sign-box">
-         <div class="col-1">
-            <img src="image.png">
-         </div> 
-         <div class="col-2">
-            <h2>Let's Star Today</h2> 
-            <span>Already have an account? <a href="#">Login</a></span>
-            <a href="" class="google-link">
-               <img src="google.png"> Continue with google
-            </a>
-            <h4>or</h4>
+<div class="container">
+    <div class="product">
 
-            <form>
-                <label>Email Address</label>
-                <input type="email" placeholder="Enter you email" class="input-field">
+        <img src="images/shoes.png" id="frontIng">
+        <img src="images/shoes2.png" id="backing">
 
-                <label>Set Password</label>
-                <input type="password" placeholder="Enter Password" class="input-field">
-                
-                <div class="row">
-                  <input type="checkbox" checked>
-                  <span>I agree to the <a href="#">terms and conditions</a></span>
+        <div class="product-inner" id="productBox">
+            <div class="product-front">
+                <div class="product-top">
+                    <h1>Nike</h1>
                 </div>
-                <button type="submit">Register Now</button>
-            </form>
-
-
-         </div> 
-      </div>  
+                <div class="product-buttom">
+                    <p>Nike Runing Shoes</p>
+                    <h2>Air Zoom Winflo 6</h2>
+                    <h1>125 <span>$</span></h1>
+                    <button type="button">Add To Bag</button>
+                    <div class="color-select">
+                        <div class="select-item">
+                           <img src="images/shoes-icon.png"> 
+                        </div>
+                        <div class="select-item">
+                            <img src="images/shoes-icon2.png" onclick="flipRight()"> 
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-back">
+                <div class="product-top product-top2">
+                    <h1>Nike</h1>
+                </div>
+                <div class="product-buttom">
+                    <p>Nike Runing Shoes</p>
+                    <h2>Air Zoom Winflo 6</h2>
+                    <h1>125 <span>$</span></h1>
+                    <button type="button">Add To Bag</button>
+                    <div class="color-select">
+                        <div class="select-item">
+                           <img src="images/shoes-icon.png" onclick="flipleft()"> 
+                        </div>
+                        <div class="select-item">
+                            <img src="images/shoes-icon2.png"> 
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="left-side"></div>
+            <div class="right-side"></div>
+        </div>
     </div>
+</div>
+    <script>
+        var productBox = document.getElementById("productBox");
+        var frontIng = document.getElementById("frontIng");
+        var backIng = document.getElementById("backIng");
 
-</div>    
+        function flipRight() {
+            productBox.style.transform = "rotateY(180deg)";
+            frontIng.style.left = "650px";
+            backIng.style.left = "20px";
+            frontIng.style.transform = 'rotate(-30deg)';
+            backIng.style.transform = 'rotate(0deg)';
+        }
+        function flipleft() {
+            productBox.style.transform = "rotateY(0deg)";
+            frontIng.style.left = "20px";
+            backIng.style.left = "-650px";
+            frontIng.style.transform = 'rotate(0deg)';
+            backIng.style.transform = 'rotate(-30deg);'
+        }
+
+
+    </script>
 </body>
 </html>

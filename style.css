@@ -1,103 +1,227 @@
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: 'poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background: #140019;
 }
 .container {
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(45deg, transparent, #009688);
+    width: 600px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
+    margin: auto;
 }
-.sign-box {
-    display: flex;
-    align-items: center;
+.product {
+   width: 400px; 
+   height: 550px;
+   perspective: 1000px;
+}
+.product-inner {
+   position: relative;
+   height: 100vh;
+   height: 100%; 
+   transform-style: preserve-3d;
+   transition: 1s;
+   transform: rotateY(180deg);
+  
+}
+.product-front {
+    position: absolute;
     width: 100%;
-    max-width: 800px;
-    flex: wrap;
-}
-.col-1, .col-2 {
-    flex-basis: 50%;
-    flex-grow: 1;
-}
-.col-1 img {
-    width: 100%;
-    display: block;
-}
-.col-2 {
+    height: 100%;
     background: #fff;
-    padding: 40px 8%;
-    color: #333;
-    min-width: 250px;
+    transform: translateZ(25px);
+    transition: 1s;
+    transform: rotateY(180deg);
 }
-.col-2 h2 {
-  font-weight: 600;  
-}
-.col-2 span {
-    font-size: 12px;
-}
-.col-2 span a {
-    text-decoration: none;
-    color: #ef005d;
-    font-weight: 500;
-}
-.google-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ef005d;
-    text-decoration: none;
-    color: #555;
-    font-size: 13px;
-    margin: 20px 0;
-}
-.google-link img {
-   width: 20px;
-   margin-right: 10px; 
-}
-.col-2 h4 {
-    text-align: center;
-    font-weight: 400;
-    margin-bottom: 18px;
-}
-.input-field{
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ef005d;
-    outline: none;
-    display: block;
+.product-top {
+    height: 50%;
     width: 100%;
-    margin: 5px 0 10px;
-}
-form label {
-    font-weight: 500;
-    font-size: 12px;
-}
-.row {
-    display: flex;
-    align-items: center;
-}
-.row input {
-   margin-right: 6px; 
-}
-.col-2 form button {
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ef005d;
-    outline: none;
-    display: block;
-    width: 100%;
-    margin: 18px 0 10px; 
-    background: #ef005d;
+    background: linear-gradient(#0794a6, #9bae07);
     color: #fff;
+
+}
+.product-top h1 {
+   font-size: 130px;
+   margin-left: 20px; 
+   font-style: italic;
+   opacity: 0.3;
+}
+.product-buttom {
+   padding: 50px 30px; 
+}
+.product-buttom p {
+    font-size: 12px;
+}
+.product-buttom h2 {
+    margin-bottom: 35px;
+    color: #008394;
+    letter-spacing: 1px;
+}
+.product-buttom h1 {
+    font-style: 40px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 5px;
+}
+.product-buttom h1 span {
+    color: #008394;
+}
+.product-buttom button {
+    padding: 9px 25px;
+    background: transparent;
+    color: #008394;
+    border: 1px solid #008394;
+    border-radius: 30px;
+    outline: none;
     cursor: pointer;
 }
+.color-select {
+    display: flex;
+    float: right;
+    margin-top: -10px;
+}
+.select-item {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    padding: 5px;
+    box-shadow: -5 0 8px 2px rgba(156, 216, 244, 0.5);
+    border-radius: 15%;
+    text-align: center;
+    cursor: pointer;
+}
+.select-item img {
+    width: 80%;
+    padding-top: 10%;
+}
+.select-item:hover {
+    background: rgba(156, 216, 244, 0.5);
+    box-shadow: none;
+    transition: 0.5s;
+}
+.product-top2 {
+    background: linear-gradient(#c370fd, #3be1b8);
+}
+.product-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #fff;
+    transform: translateZ(125px) rotateY(180deg);
+}
+.left-side, .right-side {
+    width: 50px;
+    height: 100%;
+    background: #fff;
+    transform: rotateY(90deg);
+    position: absolute;
+    top: 0;
+    left: -25px;
+}
+.right-side {
+    transform: rotateY(-90deg);
+    left: auto;
+    right: -25px;
+}
+#frontIng {
+    width: 340px;
+    top: 70px;
+    left: 20px;
+    position: absolute;
+    transform: translateZ(50px);
+    transition: 1s;
+    z-index: 100;
+}
+#backing {
+    width: 340px;
+    top: 70px;
+    left: 650px;
+    position: absolute;
+    transform: translateZ(50px) rotate(-30deg);
+    transition: 1s;
+    z-index: 100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
 
 
 
