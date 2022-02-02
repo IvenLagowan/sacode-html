@@ -2,73 +2,86 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming Website Page - Easy Totorials</title>
+    <title>Image Slider Design - Easy Totorials</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body>
-    <div class="container">
-        <div class="navbar">
-            <img src="images/logo.png" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="">Game Controllers</a></li>
-                    <li><a href="">VR Accessories</a></li>
-                    <li><a href="">Media Remotes </a></li>
-                    <li><a href="">Others</a></li>
-                </ul>
-            </nav id="menuList">
-            <img src="images/menu.png" class="menu-icon" onclick="togglemenu()">
-        </div>
 
-        <div class="row">
-            <div class="col-1">
-                <h2>PS4 V2<br>Dualshock 4</h2>
-                <h3>Wireless Controller For  PlayStation 4</h3>
-                <p>(Compatible/Generic)</p>
-                <h4>$32.50</h4>
-                <button type="button">Buy Now <img src="images/arrow.png">
-                </button>
-            </div>  
-            <div class="col-2">
-                <img src="images/controller.png" class="controller">
-                <div class="color-box"></div>
-                <div class="add-btn">
-                   <img src="images/add.png"> 
-                   <p><small>Add To Cart</small></p>
-                </div>
-            </div>   
-        </div>
-
-        <div class="social-links">
-            <img src="images/fb.png">
-            <img src="images/tw.png">
-            <img src="images/ig.png">
-        </div>
-
+<div class="container">
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="images/aston-martin.jpg"></div>
+      <div class="swiper-slide"><img src="images/audi-rs-e-tron-gt.jpg"></div>
+      <div class="swiper-slide"><img src="images/maserati-mc20.jpg"></div>
+      <div class="swiper-slide"><img src="images/nio-et5.jpg"></div>
+    
     </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+</div>
 
-    <script>
 
-        var menuList = document.getElementById(menuList);
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>  
 
-        menuList.style.maxHeight = "0px";
-        
-        function togglemenu() {
-           
-            if(menuList.style.maxHeight == "0px")
-                {
-                    menuList.style.maxHeight = "130px";
-                }
-            else
-                {
-                    menuList.style.maxHeight = "0px";
 
-                }
-        }
+<script>
+  const swiper = new Swiper('.swiper', {
+      autoplay: {
+        delay: 3000,
+        disableOnIntereraction: false,
+      },
+  loop: true,
 
-    </script>
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
 
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+
+</script>
 
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
